@@ -4,6 +4,7 @@ import Search  from "./Search";
 import Dropdown from "./Dropdown";
 import Translate from "./Translate";
 import Route from "./Route";
+import Tabs from "./Tabs";
 
 const items =[
     {
@@ -37,9 +38,10 @@ const options = [
 
 const App = () => {
     const [selected, setSelected] = useState(options[0]);
-    
+
     return (
         <div className="">
+            <Tabs/>
             <Route path="/"><Accordion items={items}/></Route>
             <Route path="/list"><Search/></Route>
             <Route path="/dropdown"><Dropdown options={options} label="Select a color" selected={selected} onSelectedChange={setSelected}/></Route>
