@@ -22,8 +22,8 @@ const Dropdown = ({options, label, selected, onSelectedChange}) => {
 
         document.body.addEventListener('click',onBodyClick,{capture: true})
         return () => {
-            console.log("Cleaning up")
-            document.body.removeEventListener('click', {capture: true})
+            console.log("Cleaning up dropdown use effect")
+            document.body.removeEventListener('click', onBodyClick, {capture: true})
         } 
     }, [])
 
